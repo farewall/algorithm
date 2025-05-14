@@ -1,7 +1,7 @@
 package com.xusn.popular;
 
 /**
- * 单链表反转
+ * 单链表反转啊啊
  */
 public class ReverseList {
     class ListNode {
