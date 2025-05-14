@@ -5,31 +5,31 @@ import java.util.Map;
 
 /**
  *
- 3. 无重复字符的最长子串
- 中等
+ 3. ���ظ��ַ�����Ӵ�
+ �е�
 
- 给定一个字符串 s ，请你找出其中不含有重复字符的 最长 子串 的长度。
- 示例 1:
+ ����һ���ַ��� s �������ҳ����в������ظ��ַ��� � �Ӵ� �ĳ��ȡ�
+ ʾ�� 1:
 
- 输入: s = "abcabcbb"
- 输出: 3
- 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
- 示例 2:
+ ����: s = "abcabcbb"
+ ���: 3
+ ����: ��Ϊ���ظ��ַ�����Ӵ��� "abc"�������䳤��Ϊ 3��
+ ʾ�� 2:
 
- 输入: s = "bbbbb"
- 输出: 1
- 解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
- 示例 3:
+ ����: s = "bbbbb"
+ ���: 1
+ ����: ��Ϊ���ظ��ַ�����Ӵ��� "b"�������䳤��Ϊ 1��
+ ʾ�� 3:
 
- 输入: s = "pwwkew"
- 输出: 3
- 解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
- 请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
+ ����: s = "pwwkew"
+ ���: 3
+ ����: ��Ϊ���ظ��ַ�����Ӵ��� "wke"�������䳤��Ϊ 3��
+ ��ע�⣬��Ĵ𰸱����� �Ӵ� �ĳ��ȣ�"pwke" ��һ�������У������Ӵ���
 
- 提示：
+ ��ʾ��
 
  0 <= s.length <= 5 * 104
- s 由英文字母、数字、符号和空格组成
+ s ��Ӣ����ĸ�����֡����źͿո����
  */
 
 
@@ -53,7 +53,7 @@ public class LengthOfLongestSubstring {
     }
 
     public static int lengthOfLongestSubstring(String s) {
-        // 用于存储窗口内的字符和出现的个数
+        // ���ڴ洢�����ڵ��ַ��ͳ��ֵĸ���
         Map<Character, Integer> windows = new HashMap<>();
         int left = 0;
         int right = 0;
@@ -63,7 +63,7 @@ public class LengthOfLongestSubstring {
             char c = s.charAt(right);
             windows.put(c, windows.getOrDefault(c, 0) + 1);
             right++;
-            // 定义窗口收缩的条件, 当前的字符在窗口内出现多次
+            // ���崰������������, ��ǰ���ַ��ڴ����ڳ��ֶ��
             while (windows.get(c) > 1) {
                 char d = s.charAt(left);
                 windows.put(d, windows.get(d) - 1);
