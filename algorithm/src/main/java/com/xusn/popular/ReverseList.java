@@ -1,7 +1,7 @@
 package com.xusn.popular;
 
 /**
- * å•é“¾è¡¨åè½¬å•Šå•Š
+ * µ¥Á´±í·´×ª°¡°¡
  */
 public class ReverseList {
     class ListNode {
