@@ -1,4 +1,4 @@
-package com.xusn.popular;
+package com.xusn.first;
 
 /**
  * 单链表反转啊啊

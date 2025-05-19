@@ -1,6 +1,4 @@
-package com.xusn.popular;
-
-import java.util.List;
+package com.xusn.first;
 
 /**
  * 合并两个有序链表

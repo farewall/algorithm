@@ -1,6 +1,4 @@
-package com.xusn.popular;
-
-import java.util.Arrays;
+package com.xusn.first;
 
 /**
  * 找到数组中第K大的元素，排序时不用去重，时间复杂度要求是O(n)
