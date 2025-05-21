@@ -4,6 +4,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * ≈–∂œ «∑Ò”–ª∑
+ */
 public class HasCycle {
 
     class ListNode {
