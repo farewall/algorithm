@@ -6,14 +6,14 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * åˆå¹¶åŒºé—´
- * ä»¥æ•°ç»„ intervals è¡¨ç¤ºè‹¥å¹²ä¸ªåŒºé—´çš„é›†åˆï¼Œå…¶ä¸­å•ä¸ªåŒºé—´ä¸º intervals[i] = [starti, endi] ã€‚è¯·ä½ åˆå¹¶æ‰€æœ‰é‡å çš„åŒºé—´ï¼Œå¹¶è¿”å› ä¸€ä¸ªä¸é‡å çš„åŒºé—´æ•°ç»„ï¼Œè¯¥æ•°ç»„éœ€æ°å¥½è¦†ç›–è¾“å…¥ä¸­çš„æ‰€æœ‰åŒºé—´ ã€‚
+ * ºÏ²¢Çø¼ä
+ * ÒÔÊı×é intervals ±íÊ¾Èô¸É¸öÇø¼äµÄ¼¯ºÏ£¬ÆäÖĞµ¥¸öÇø¼äÎª intervals[i] = [starti, endi] ¡£ÇëÄãºÏ²¢ËùÓĞÖØµşµÄÇø¼ä£¬²¢·µ»Ø Ò»¸ö²»ÖØµşµÄÇø¼äÊı×é£¬¸ÃÊı×éĞèÇ¡ºÃ¸²¸ÇÊäÈëÖĞµÄËùÓĞÇø¼ä ¡£
  *
- * ç¤ºä¾‹ 1ï¼š
+ * Ê¾Àı 1£º
  *
- * è¾“å…¥ï¼šintervals = [[1,3],[2,6],[8,10],[15,18]]
- * è¾“å‡ºï¼š[[1,6],[8,10],[15,18]]
- * è§£é‡Šï¼šåŒºé—´ [1,3] å’Œ [2,6] é‡å , å°†å®ƒä»¬åˆå¹¶ä¸º [1,6].
+ * ÊäÈë£ºintervals = [[1,3],[2,6],[8,10],[15,18]]
+ * Êä³ö£º[[1,6],[8,10],[15,18]]
+ * ½âÊÍ£ºÇø¼ä [1,3] ºÍ [2,6] ÖØµş, ½«ËüÃÇºÏ²¢Îª [1,6].
  */
 public class MergeIntervals {
     public int[][] merge(int[][] intervals) {
@@ -26,7 +26,7 @@ public class MergeIntervals {
         for (int i = 1; i < intervals.length; i++) {
             int[] current = intervals[i];
             int[] lastInterval = result.get(result.size() - 1);
-            // æœ‰é‡å 
+            // ÓĞÖØµş
             if (current[0] <= lastInterval[1]) {
                 lastInterval[1] = Math.max(current[1], lastInterval[1]);
             } else {
