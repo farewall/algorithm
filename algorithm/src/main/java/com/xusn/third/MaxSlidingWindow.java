@@ -22,7 +22,7 @@ public class MaxSlidingWindow {
                 queue.pollLast();
             }
             queue.offerLast(i);
-            // 队头有可能超出范围:3,2,1这类降序的场景
+            // 队头有可能超出范围:3,2,1这类降序的场景, i = 2 k = 2时，需要移除nums[0]
             if (queue.peekFirst() <= i - k) {
                 queue.pollFirst();
             }
