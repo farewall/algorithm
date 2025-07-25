@@ -17,6 +17,7 @@ public class LongestValidParentheses {
             } else {
                 stack.pop();
                 if (stack.empty()) {
+                    // 不存在配对成功的区间
                     stack.push(i);
                 } else {
                     int validLength = i - stack.peek();
